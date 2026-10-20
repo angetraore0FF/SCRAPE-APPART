@@ -1,0 +1,47 @@
+ecole:
+  nom: "ECE Paris"
+  adresse: "10 Rue Sextius Michel, 75015 Paris"
+
+recherche:
+  villes:
+    - "Paris"
+    - "Versailles"
+    - "Viroflay"
+    - "Chaville"
+    - "Sèvres"
+    - "Meudon"
+    - "Clamart"
+    - "Issy-les-Moulineaux"
+    - "Vanves"
+    - "Montrouge"
+
+filtres:
+  prix_min: 500
+  prix_max: 700
+  temps_trajet_max_minutes: 90
+  correspondances_max: 3
+
+poids_score:
+  w_prix: 0.35
+  w_distance: 0.35
+  w_confort: 0.20
+  w_apl: 0.10
+
+api:
+  google_transit_api_key: null  # Google Directions API, mode transit — nécessaire pour les correspondances
+  ors_api_key: null             # OpenRouteService, optionnel, durée seule, pas de correspondances
+  # Variables d'environnement acceptées (recommandé, la clé reste hors du projet) :
+  #   GOOGLE_TRANSIT_API_KEY, ORS_API_KEY, et PRIM_API_KEY (alternative gratuite Île-de-France, avec correspondances)
+
+sessions:
+  studapart:
+    url: "https://omneseducation.studapart.com/fr/search/"
+    state_file: "storage_state_studapart.json"
+  colette:
+    url: "https://www.colette-cohabitation.com/"
+    state_file: "storage_state_colette.json"
+
+fichiers:
+  cache_json: "annonces_brutes.json"
+  output_pdf: "meilleures_offres_logement.pdf"
+  log_file: "scraping.log"

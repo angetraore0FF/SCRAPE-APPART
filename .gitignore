@@ -1,0 +1,22 @@
+﻿# --- Sessions et données sensibles (cookies de connexion !) ---
+storage_state_*.json
+storage_state.json
+chrome_profile*/
+.env
+
+# --- Données et résultats générés (personnels) ---
+annonces_brutes.json
+geocache.json
+studapart_*.json
+scraping.log
+*.log
+*.pdf
+*.png
+
+# --- Divers ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+legacy/
+scrappe appart prompt.txt
